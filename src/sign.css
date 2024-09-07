@@ -6,39 +6,91 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+html{
+    overflow-x: hidden;
+}
 body{
-    height: 100vh;
+    overflow-x: hidden;
+}
+.sign_sec{
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 50px;
+    padding: 100px 0px;
     text-align: center;
     flex-direction: column;
     gap: 20px;
-    background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
-
+    /* background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% ); */
+    margin-top: 70px;
+}
+.sign_sec .sign_app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 50px 10px;
+    height: auto;
+    gap: 20px;
+}
+.sign_sec .sec_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+.sign_sec .sec_title span:nth-child(2){
+   font-size: 1.2rem;
+   letter-spacing: 3px;
+   color: rgb(96, 96, 96);
 }
 .title{
-    font-size: 30px;
+    font-size:4rem;
     font-weight: bold;
 }
+.sign_sec .canvas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    gap: 20px;
+}
+.sign_sec .canvas .color_picker{
+     display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sign_sec .canvas .color_picker button{
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sign_sec .canvas .color_picker .select{
+    border: 4px solid black;
+}
 .main{
-    margin-top: 50px;
     background-color: white;
 }
 .btn_grp{
-    margin-top: 20px;
-    width: 600px;
-    height:50px;
+     bottom: -20px;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 30px;
+    position: absolute;
 }
 .btn_grp button{
-    height: 100%;
+    height: 50px;
     padding:10px 20px ;
-    font-size: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     cursor: pointer;
     border-radius: 5px;
@@ -47,14 +99,15 @@ body{
 }
 button:hover{
 transform: scale(0.97);
+background-color: #413839;
+color: white;
 }
 .result{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 200px;
-    width: 600px;
-    margin-top: 50px;
+    height: 300px;
+    width: 40%;
     background-color: #413839;
     border: 2px solid black;
 }
@@ -62,17 +115,31 @@ transform: scale(0.97);
 .result .res{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 15%;
     gap: 20px 5px;
+    padding: 0px 20px;
     
 }
 .res button{
     background-color: black;
     color: white;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 .res button:hover{
-    transform: scale(1.1);
-    color: green;
+    background-color: rgb(143, 143, 143);
+    color: rgb(0, 0, 0);
 }
 .image{
     background-color: white;
@@ -96,33 +163,120 @@ transform: scale(0.97);
     width: 100%;
     height: 100%;
 }
-@media (max-width:600px){
+.color_picker .select{
+    border: 5px solid black;
+}
+@media only screen and (max-width: 600px) {
     body{
-        min-height: 100vh;
-        width: 100vw;
-        display: flex;
+        overflow-x: hidden;
+    }
+    .sign_sec{
+        height: auto;
+    }
+    .sign_sec .sign_app{
+        flex-direction: column;
+    }
+
+    .sign_sec .sec_title span:nth-child(2){
+       font-size: 0.8rem;
+       letter-spacing: 3px;
+       color: rgb(96, 96, 96);
+    }
+    .sign_sec .canvas{
+        flex-direction: column;
+    }
+    .sign_sec .canvas .color_picker{
+        flex-direction: row;
+    }
+    .sign_sec .canvas .color_picker button{
+        height: 30px;
+        width: 30px;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
     }
     .main{
-        width: 350px;
+        background-color: white;
+        width: 300px !important;
+        height: 160px !important;
+    }
+    .main .sign_canvas{
+        width: 300px !important;
+        height: 160px !important;
     }
     .btn_grp{
-        width: 350px;
+        top: 300px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        position: absolute;
+        height: 50px;
+    }
+    .btn_grp button{
+        height: 50px;
+        padding:10px 20px ;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        border:none;
+        transition: 0.2s;
+    }
+    button:hover{
+    transform: scale(0.97);
+    background-color: #413839;
+    color: white;
     }
     .result{
-        width: 350px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 160px;
+        width: 300px;
+        background-color: #413839;
+        border: 2px solid black;
+        margin-top: 120px;
+        position: relative;
     }
     
-    .res button{
-        padding: 5px 15px;
+    .result .res{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px 5px;
+        padding: 0px 20px;
+        position: absolute;
+        bottom: -60px;
+        
     }
-    .res button:hover{
-        transform: scale(1.1);
-        color: green;
+    .res button{
+        background-color: black;
+        color: white;
+        outline: none;
+        border: none;
+        height: 40px;
+        width: 80px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
     }
     .image{
-    }
-    .image img{
-        height: 80%;
+        background-color: white;
         width: 100%;
+    }
+
+    .text{
+        font-size: 1.4rem;
     }
 }

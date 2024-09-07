@@ -1,0 +1,20 @@
+.jpgSigner_sec{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 0px;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.jpgSigner_sec h1{
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 600px) {
+.upload_box{
+    width: 100%;
+}
+}

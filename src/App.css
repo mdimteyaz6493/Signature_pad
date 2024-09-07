@@ -1,0 +1,29 @@
+a{
+    text-decoration: none;
+    color: rgb(254, 254, 254);
+}
+
+nav{
+    background-color: rgb(83, 129, 214);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 50px;
+    position: fixed;
+    z-index: 10;
+    border-bottom: 1px solid rgb(158, 158, 158);
+    color: white;
+    top: 0;
+}
+nav span:nth-child(1){
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    }
+nav span:nth-child(2){
+font-size: 2rem;
+cursor: pointer;
+}
